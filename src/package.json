@@ -1,0 +1,13 @@
+{
+	"name": "blazing",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/tailwind.css --watch",
+		"build": "tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/tailwind.css"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.6",
+		"tailwindcss": "^4.1.6"
+	}
+}
