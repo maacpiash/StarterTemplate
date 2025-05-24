@@ -20,26 +20,94 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *@
-<div class="top-row ps-3 navbar navbar-dark">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="">Blazing</a>
-	</div>
-</div>
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-	<nav class="nav flex-column">
-		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-				<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-			</NavLink>
+<header class="navbar bg-base-100 shadow-sm gradient">
+	<nav class="navbar-start">
+		<div class="dropdown">
+			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+				</svg>
+			</div>
+			<ul tabindex="0"
+				class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow border">
+				<li>
+					<NavLink href="" Match="NavLinkMatch.All">
+						<span class="bi bi-house-door-fill"></span>
+						Home
+					</NavLink>
+				</li>
+				<li>
+					<span>
+						<span class="bi bi-lightning"></span>Interactivity
+					</span>
+					<ul class="p-2">
+						<li>
+							<NavLink class="nav-link" href="counter">
+								<span class="bi bi-plus-square"></span>
+								Counter
+							</NavLink>
+						</li>
+						<li>
+							<NavLink class="nav-link" href="todos">
+								<span class="bi bi-check-square"></span>
+								Todos
+							</NavLink>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<NavLink class="nav-link" href="weather">
+						<span class="bi bi-list-nested"></span>
+						Weather
+					</NavLink>
+				</li>
+			</ul>
 		</div>
-
-		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="weather">
-				<span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-			</NavLink>
-		</div>
+		<span class="text-xl">Blazing 🚀</span>
 	</nav>
-</div>
+	<nav class="navbar-center hidden lg:flex">
+		<ul class="menu menu-horizontal px-1">
+			<li>
+				<NavLink href="" Match="NavLinkMatch.All">
+					<span class="bi bi-house-door-fill"></span>
+					Home
+				</NavLink>
+			</li>
+			<li>
+				<details>
+					<summary>
+						<span class="bi bi-lightning"></span>
+						Interactivity
+					</summary>
+					<ul class="p-2">
+						<li>
+							<NavLink class="nav-link" href="counter">
+								<span class="bi bi-plus-square"></span>
+								Counter
+							</NavLink>
+						</li>
+						<li>
+							<NavLink class="nav-link" href="todos">
+								<span class="bi bi-check-square"></span>
+								Todos
+							</NavLink>
+						</li>
+					</ul>
+				</details>
+			</li>
+			<li>
+				<NavLink class="nav-link" href="weather">
+					<span class="bi bi-list-nested"></span>
+					Weather
+				</NavLink>
+			</li>
+		</ul>
+	</nav>
+	<div class="navbar-end">
+		<a class="btn btn-outline" href="https://github.com/maacpiash/StarterTemplate" target="_blank">
+			<span class="bi bi-github"></span>
+			repository
+		</a>
+	</div>
+</header>
