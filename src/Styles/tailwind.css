@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@layer base {
+	*:focus {
+		@apply outline-none;
+	}
+
+	*:focus-visible {
+		@apply outline outline-primary;
+	}
+}
