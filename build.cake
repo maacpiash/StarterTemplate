@@ -26,7 +26,7 @@ using System.Diagnostics;
 
 const string red = "\u001b[31m";
 const string green = "\u001b[32m";
-const string inverse = "\u001b[7m";
+// const string inverse = "\u001b[7m";
 const string reset = "\u001b[0m";
 
 var target = Argument("t", "dev"); // default target is "dev"
@@ -83,8 +83,8 @@ Process StartAndLog(string cmd, string args, DirectoryPath workingDir)
 		CreateNoWindow = false
 	});
 
-	process.OutputDataReceived += (s, e) => Information($"{inverse}{cmd}{reset}\t {e.Data}");
-	process.ErrorDataReceived += (s, e) => Error($"{inverse}{cmd}{reset}\t {e.Data}");
+	process.OutputDataReceived += (s, e) => Information($"{green}{cmd}{reset}\t {e.Data}");
+	process.ErrorDataReceived += (s, e) => Error($"{red}{cmd}{reset}\t {e.Data}");
 	process.BeginOutputReadLine();
 	process.BeginErrorReadLine();
 
