@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/tailwind.css --watch",
-		"build": "tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/tailwind.css"
+		"build": "tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/tailwind.css --minify"
 	},
 	"devDependencies": {
 		"@tailwindcss/cli": "^4.1.6",
